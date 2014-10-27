@@ -1,4 +1,4 @@
-/*! onsenui - v1.2.0-dev - 2014-10-17 */
+/*! onsenui - v1.2.0-dev - 2014-10-27 */
 /* Simple JavaScript Inheritance
  * By John Resig http://ejohn.org/
  * MIT Licensed.
@@ -3918,123 +3918,136 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 })();
 
 (function(module) {
-try { app = angular.module("templates-main"); }
-catch(err) { app = angular.module("templates-main", []); }
-app.run(["$templateCache", function($templateCache) {
-  "use strict";
-  $templateCache.put("templates/back_button.tpl",
-    "<span class=\"toolbar-button--quiet {{modifierTemplater('toolbar-button--*')}}\" ng-click=\"$root.ons.findParentComponentUntil('ons-navigator', $event).popPage()\" style=\"height: 44px; line-height: 0; padding: 0; position: relative;\">\n" +
-    "  <i class=\"ion-ios7-arrow-back ons-back-button__icon\" style=\"vertical-align: top; background-color: transparent; height: 44px; line-height: 44px; font-size: 36px; margin-left: 8px; margin-right: 2px; width: 16px; display: inline-block; padding-top: 1px;\"></i><span style=\"vertical-align: top; display: inline-block; line-height: 44px; height: 44px;\" class=\"back-button__label\"></span>\n" +
-    "</span>\n" +
-    "");
+try { app = angular.module('templates-main'); }
+catch(err) { app = angular.module('templates-main', []); }
+app.run(['$templateCache', function($templateCache) {
+  'use strict';
+  $templateCache.put('templates/back_button.tpl',
+    '<span class="toolbar-button--quiet {{modifierTemplater(\'toolbar-button--*\')}}" ng-click="$root.ons.findParentComponentUntil(\'ons-navigator\', $event).popPage()" style="height: 44px; line-height: 0; padding: 0 10px 0 0; position: relative;">\n' +
+    '  <i class="ion-ios7-arrow-back ons-back-button__icon" style="vertical-align: top; background-color: transparent; height: 44px; line-height: 44px; font-size: 36px; margin-left: 8px; margin-right: 2px; width: 16px; display: inline-block; padding-top: 1px;"></i><span style="vertical-align: top; display: inline-block; line-height: 44px; height: 44px;" class="back-button__label"></span>\n' +
+    '</span>\n' +
+    '');
 }]);
 })();
 
 (function(module) {
-try { app = angular.module("templates-main"); }
-catch(err) { app = angular.module("templates-main", []); }
-app.run(["$templateCache", function($templateCache) {
-  "use strict";
-  $templateCache.put("templates/button.tpl",
-    "<span class=\"label ons-button-inner\"></span>\n" +
-    "<span class=\"spinner button__spinner {{modifierTemplater('button--*__spinner')}}\"></span>\n" +
-    "");
+try { app = angular.module('templates-main'); }
+catch(err) { app = angular.module('templates-main', []); }
+app.run(['$templateCache', function($templateCache) {
+  'use strict';
+  $templateCache.put('templates/button.tpl',
+    '<span class="label ons-button-inner"></span>\n' +
+    '<span class="spinner button__spinner {{modifierTemplater(\'button--*__spinner\')}}"></span>\n' +
+    '');
 }]);
 })();
 
 (function(module) {
-try { app = angular.module("templates-main"); }
-catch(err) { app = angular.module("templates-main", []); }
-app.run(["$templateCache", function($templateCache) {
-  "use strict";
-  $templateCache.put("templates/icon.tpl",
-    "<i class=\"fa fa-{{icon}} fa-{{spin}} fa-{{fixedWidth}} fa-rotate-{{rotate}} fa-flip-{{flip}}\" ng-class=\"sizeClass\" ng-style=\"style\"></i>\n" +
-    "");
+try { app = angular.module('templates-main'); }
+catch(err) { app = angular.module('templates-main', []); }
+app.run(['$templateCache', function($templateCache) {
+  'use strict';
+  $templateCache.put('templates/dialog.tpl',
+    '<div class="dialog-mask"></div>\n' +
+    '<div class="dialog {{ modifierTemplater(\'dialog--*\') }}"></div>\n' +
+    '</div>\n' +
+    '');
 }]);
 })();
 
 (function(module) {
-try { app = angular.module("templates-main"); }
-catch(err) { app = angular.module("templates-main", []); }
-app.run(["$templateCache", function($templateCache) {
-  "use strict";
-  $templateCache.put("templates/row.tpl",
-    "<div class=\"row row-{{align}} ons-row-inner\"></div>\n" +
-    "");
+try { app = angular.module('templates-main'); }
+catch(err) { app = angular.module('templates-main', []); }
+app.run(['$templateCache', function($templateCache) {
+  'use strict';
+  $templateCache.put('templates/icon.tpl',
+    '<i class="fa fa-{{icon}} fa-{{spin}} fa-{{fixedWidth}} fa-rotate-{{rotate}} fa-flip-{{flip}}" ng-class="sizeClass" ng-style="style"></i>\n' +
+    '');
 }]);
 })();
 
 (function(module) {
-try { app = angular.module("templates-main"); }
-catch(err) { app = angular.module("templates-main", []); }
-app.run(["$templateCache", function($templateCache) {
-  "use strict";
-  $templateCache.put("templates/sliding_menu.tpl",
-    "<div class=\"onsen-sliding-menu__menu ons-sliding-menu-inner\"></div>\n" +
-    "<div class=\"onsen-sliding-menu__main ons-sliding-menu-inner\"></div>\n" +
-    "");
+try { app = angular.module('templates-main'); }
+catch(err) { app = angular.module('templates-main', []); }
+app.run(['$templateCache', function($templateCache) {
+  'use strict';
+  $templateCache.put('templates/row.tpl',
+    '<div class="row row-{{align}} ons-row-inner"></div>\n' +
+    '');
 }]);
 })();
 
 (function(module) {
-try { app = angular.module("templates-main"); }
-catch(err) { app = angular.module("templates-main", []); }
-app.run(["$templateCache", function($templateCache) {
-  "use strict";
-  $templateCache.put("templates/split_view.tpl",
-    "<div class=\"onsen-split-view__secondary full-screen ons-split-view-inner\"></div>\n" +
-    "<div class=\"onsen-split-view__main full-screen ons-split-view-inner\"></div>\n" +
-    "");
+try { app = angular.module('templates-main'); }
+catch(err) { app = angular.module('templates-main', []); }
+app.run(['$templateCache', function($templateCache) {
+  'use strict';
+  $templateCache.put('templates/sliding_menu.tpl',
+    '<div class="onsen-sliding-menu__menu ons-sliding-menu-inner"></div>\n' +
+    '<div class="onsen-sliding-menu__main ons-sliding-menu-inner"></div>\n' +
+    '');
 }]);
 })();
 
 (function(module) {
-try { app = angular.module("templates-main"); }
-catch(err) { app = angular.module("templates-main", []); }
-app.run(["$templateCache", function($templateCache) {
-  "use strict";
-  $templateCache.put("templates/switch.tpl",
-    "<label class=\"switch {{modifierTemplater('switch--*')}}\">\n" +
-    "  <input type=\"checkbox\" class=\"switch__input {{modifierTemplater('switch--*__input')}}\" ng-model=\"model\">\n" +
-    "  <div class=\"switch__toggle {{modifierTemplater('switch--*__toggle')}}\"></div>\n" +
-    "</label>\n" +
-    "");
+try { app = angular.module('templates-main'); }
+catch(err) { app = angular.module('templates-main', []); }
+app.run(['$templateCache', function($templateCache) {
+  'use strict';
+  $templateCache.put('templates/split_view.tpl',
+    '<div class="onsen-split-view__secondary full-screen ons-split-view-inner"></div>\n' +
+    '<div class="onsen-split-view__main full-screen ons-split-view-inner"></div>\n' +
+    '');
 }]);
 })();
 
 (function(module) {
-try { app = angular.module("templates-main"); }
-catch(err) { app = angular.module("templates-main", []); }
-app.run(["$templateCache", function($templateCache) {
-  "use strict";
-  $templateCache.put("templates/tab.tpl",
-    "<input type=\"radio\" name=\"tab-bar-{{tabbarId}}\" style=\"display: none\">\n" +
-    "<button class=\"tab-bar__button tab-bar-inner {{tabbarModifierTemplater('tab-bar--*__button')}} {{modifierTemplater('tab-bar__button--*')}}\" ng-click=\"tryToChange()\">\n" +
-    "</button>\n" +
-    "");
+try { app = angular.module('templates-main'); }
+catch(err) { app = angular.module('templates-main', []); }
+app.run(['$templateCache', function($templateCache) {
+  'use strict';
+  $templateCache.put('templates/switch.tpl',
+    '<label class="switch {{modifierTemplater(\'switch--*\')}}">\n' +
+    '  <input type="checkbox" class="switch__input {{modifierTemplater(\'switch--*__input\')}}" ng-model="model">\n' +
+    '  <div class="switch__toggle {{modifierTemplater(\'switch--*__toggle\')}}"></div>\n' +
+    '</label>\n' +
+    '');
 }]);
 })();
 
 (function(module) {
-try { app = angular.module("templates-main"); }
-catch(err) { app = angular.module("templates-main", []); }
-app.run(["$templateCache", function($templateCache) {
-  "use strict";
-  $templateCache.put("templates/tab_bar.tpl",
-    "<div class=\"ons-tab-bar__content tab-bar__content\"></div>\n" +
-    "<div ng-hide=\"hideTabs\" class=\"tab-bar ons-tab-bar__footer {{modifierTemplater('tab-bar--*')}} ons-tabbar-inner\"></div>\n" +
-    "");
+try { app = angular.module('templates-main'); }
+catch(err) { app = angular.module('templates-main', []); }
+app.run(['$templateCache', function($templateCache) {
+  'use strict';
+  $templateCache.put('templates/tab.tpl',
+    '<input type="radio" name="tab-bar-{{tabbarId}}" style="display: none">\n' +
+    '<button class="tab-bar__button tab-bar-inner {{tabbarModifierTemplater(\'tab-bar--*__button\')}} {{modifierTemplater(\'tab-bar__button--*\')}}" ng-click="tryToChange()">\n' +
+    '</button>\n' +
+    '');
 }]);
 })();
 
 (function(module) {
-try { app = angular.module("templates-main"); }
-catch(err) { app = angular.module("templates-main", []); }
-app.run(["$templateCache", function($templateCache) {
-  "use strict";
-  $templateCache.put("templates/toolbar_button.tpl",
-    "<span class=\"toolbar-button {{modifierTemplater('toolbar-button--*')}} navigation-bar__line-height\" ng-transclude></span>\n" +
-    "");
+try { app = angular.module('templates-main'); }
+catch(err) { app = angular.module('templates-main', []); }
+app.run(['$templateCache', function($templateCache) {
+  'use strict';
+  $templateCache.put('templates/tab_bar.tpl',
+    '<div class="ons-tab-bar__content tab-bar__content"></div>\n' +
+    '<div ng-hide="hideTabs" class="tab-bar ons-tab-bar__footer {{modifierTemplater(\'tab-bar--*\')}} ons-tabbar-inner"></div>\n' +
+    '');
+}]);
+})();
+
+(function(module) {
+try { app = angular.module('templates-main'); }
+catch(err) { app = angular.module('templates-main', []); }
+app.run(['$templateCache', function($templateCache) {
+  'use strict';
+  $templateCache.put('templates/toolbar_button.tpl',
+    '<span class="toolbar-button {{modifierTemplater(\'toolbar-button--*\')}} navigation-bar__line-height" ng-transclude></span>\n' +
+    '');
 }]);
 })();
 
@@ -4199,14 +4212,19 @@ window.ons = (function(){
         throw new Error('Invalid initialization state.');
       }
 
+      if (document.querySelector('ons-alert-dialog')) {
+        console.warn('Invalid usage of <ons-alert-dialog>.');
+      }
+
       $rootScope.$on('$ons-ready', unlockOnsenUI);
     }]);
   }
 
   function initAngularModule() {
     module.value('$onsGlobal', ons);
-    module.run(['$compile', '$rootScope', '$onsen', function($compile, $rootScope, $onsen) {
+    module.run(['$compile', '$rootScope', '$onsen', '$q', function($compile, $rootScope, $onsen, $q) {
       ons._onsenService = $onsen;
+      ons._qService = $q;
 
       $rootScope.ons = window.ons;
       $rootScope.console = window.console;
@@ -4440,12 +4458,104 @@ window.ons = (function(){
        * @return {Boolean}
        */
       isWebView: function() {
-
         if (document.readyState === 'loading' || document.readyState == 'uninitialized') {
           throw new Error('isWebView() method is available after dom contents loaded.');
         }
 
         return !!(window.cordova || window.phonegap || window.PhoneGap);
+      },
+
+      /**
+       * @param {String} page
+       * @return {Promise}
+       */
+      createAlertDialog: function(page) {
+        if (!page) {
+          throw new Error('Page url must be defined.');
+        }
+
+        var alertDialog = angular.element('<ons-alert-dialog>'),
+          $onsen = this._getOnsenService();
+        
+        angular.element(document.body).append(angular.element(alertDialog));
+
+        return $onsen.getPageHTMLAsync(page).then(function(html) {
+          var div = document.createElement('div');
+          div.innerHTML = html;
+
+          var el = angular.element(div.querySelector('ons-alert-dialog'));
+
+          // Copy attributes and insert html.
+          var attrs = el.prop('attributes');
+          for (var i = 0, l = attrs.length; i < l; i++) {
+            alertDialog.attr(attrs[i].name, attrs[i].value); 
+          }
+          alertDialog.html(el.html());
+          ons.compile(alertDialog[0]);
+      
+          if (el.attr('disabled')) {
+            alertDialog.attr('disabled', 'disabled');
+          }
+
+          return  alertDialog.data('ons-alert-dialog');
+        });
+      },
+
+      /**
+      * @param {String} page
+      * @return {Promise}
+      */
+      createDialog: function(page) {
+        if (!page) {
+          throw new Error('Page url must be defined.');
+        }
+
+        var dialog = angular.element('<ons-dialog>'),
+        $onsen = this._getOnsenService();
+
+        angular.element(document.body).append(angular.element(dialog));
+
+        return $onsen.getPageHTMLAsync(page).then(function(html) {
+          var div = document.createElement('div');
+          div.innerHTML = html;
+
+          var el = angular.element(div.querySelector('ons-dialog'));
+
+          // Copy attributes and insert html.
+          var attrs = el.prop('attributes');
+          for (var i = 0, l = attrs.length; i < l; i++) {
+            dialog.attr(attrs[i].name, attrs[i].value); 
+          }
+          dialog.html(el.html());
+          ons.compile(dialog[0]);
+
+          if (el.attr('disabled')) {
+            dialog.attr('disabled', 'disabled');
+          }
+
+          var deferred = ons._qService.defer();
+
+          dialog.on('ons-dialog:init', function(e) {
+            // Copy "style" attribute from parent.
+            var child = dialog[0].querySelector('.dialog');
+            if (el[0].hasAttribute('style')) {
+              var parentStyle = el[0].getAttribute('style'),
+              childStyle = child.getAttribute('style'),
+              newStyle = (function(a, b) {
+                var c =
+                (a.substr(-1) === ';' ? a : a + ';') + 
+                  (b.substr(-1) === ';' ? b : b + ';'); 
+                return c;
+              })(parentStyle, childStyle);
+
+              child.setAttribute('style', newStyle);
+            }
+
+            deferred.resolve(e.component);
+          });
+
+          return deferred.promise;
+        });
       },
 
       platform: {
@@ -4550,50 +4660,118 @@ limitations under the License.
 */
 
 (function() {
-  'use strict;';
+  'use strict';
 
   var module = angular.module('onsen');
 
-  module.factory('AlertDialogView', ['$onsen', function($onsen) {
+  module.factory('AlertDialogView', ['$onsen', 'DialogAnimator', 'SlideDialogAnimator', 'AndroidAlertDialogAnimator', 'IOSAlertDialogAnimator', function($onsen, DialogAnimator, SlideDialogAnimator, AndroidAlertDialogAnimator, IOSAlertDialogAnimator) {
 
     var AlertDialogView = Class.extend({
-      _element: undefined,
-      _scope: undefined,
 
       /**
        * @param {Object} scope
        * @param {jqLite} element
+       * @param {Object} attrs
        */
-      init: function(scope, element) {
+      init: function(scope, element, attrs) {
         this._scope = scope;
         this._element = element;
+        this._element.css({
+          display: 'none',
+          zIndex: 20001
+        });
 
-        this._scope.$on('$destroy', this._destroy.bind(this));
-
-        this._disabled = false;
+        this._dialog = element;
         this._visible = false;
+        this._doorLock = new DoorLock();
 
-        this.hide();
-      },
+        this._animation = AlertDialogView._animatorDict[typeof attrs.animation !== 'undefined' ? 
+          attrs.animation : 'default'];
 
-      getDeviceBackButtonHandler: function() {
-        return this._deviceBackButtonHandler;
+        if (!this._animation) {
+          throw new Error('No such animation: ' + attrs.animation);
+        }
+
+        this._deviceBackButtonHandler = $onsen.DeviceBackButtonHandler.create(this._element, this._onDeviceBackButton.bind(this));
+        this._createMask(attrs.maskColor);
       },
 
       /**
        * Show alert dialog.
+       *
+       * @param {Object} [options]
+       * @param {String} [options.animation] animation type
+       * @param {Function} [options.callback] callback after dialog is shown
        */
-      show: function() {
-        element.css("display", "block");
-        this._visible = true;
+      show: function(options) {
+        options = options || {};
+        var cancel = false,
+          callback = options.callback || function() {};
+
+        this.emit('preshow', {
+          alertDialog: this,
+          cancel: function() { cancel = true; }
+        });
+        
+        if (!cancel) {
+          this._doorLock.waitUnlock(function() {
+            var unlock = this._doorLock.lock(),
+              animation = this._animation;
+
+            this._mask.css('display', 'block');
+            this._mask.css('opacity', 1);
+            this._element.css('display', 'block');
+            
+            if (options.animation) {
+              animation = AlertDialogView._animatorDict[options.animation];
+            }
+            
+            animation.show(this, function() {
+              this._visible = true;
+              unlock();
+              this.emit('postshow', {alertDialog: this});
+              callback();
+            }.bind(this));
+          }.bind(this));
+        }
       },
 
       /**
        * Hide alert dialog.
+       *
+       * @param {Object} [options]
+       * @param {String} [options.animation] animation type
+       * @param {Function} [options.callback] callback after dialog is hidden
        */
-      hide: function() {
-        element.css("display", "none");
-        this._visible = false;
+      hide: function(options) {
+        options = options || {};
+        var cancel = false,
+          callback = options.callback || function() {};
+        
+        this.emit('prehide', {
+          alertDialog: this,
+          cancel: function() { cancel = true; }
+        });
+
+        if (!cancel) {
+          this._doorLock.waitUnlock(function() {
+            var unlock = this._doorLock.lock(),
+              animation = this._animation;
+
+            if (options.animation) {
+              animation = AlertDialogView._animatorDict[options.animation];
+            }
+
+            animation.hide(this, function() {
+              this._element.css('display', 'none');
+              this._mask.css('display', 'none');
+              this._visible = false;
+              unlock();
+              this.emit('posthide', {alertDialog: this});
+              callback();
+            }.bind(this));
+          }.bind(this));
+        }
       },
 
       /**
@@ -4609,7 +4787,13 @@ limitations under the License.
        * Destroy alert dialog.
        */
       destroy: function() {
-        // Destroy everything!!!
+        this._element.remove();
+        this._mask.remove();
+        this._deviceBackButtonHandler.destroy();
+
+        this._scope.$destroy();
+
+        this._deviceBackButtonHandler = this._element = this._mask = null;
       },
 
       /**
@@ -4619,10 +4803,14 @@ limitations under the License.
        */
       setDisabled: function(disabled) {
         if (typeof disabled !== 'boolean') {
-          throw Error('Argument must be a boolean.');
+          throw new Error('Argument must be a boolean.');
         }
 
-        this._disabled = disabled;
+        if (disabled) {
+          this._element.attr('disabled', true);
+        } else {
+          this._element.removeAttr('disabled');
+        }
       },
 
       /**
@@ -4631,18 +4819,358 @@ limitations under the License.
        * @return {Boolean}
        */
       isDisabled: function() {
-        return this._disabled;
+        return this._element[0].hasAttribute('disabled');
       },
 
-      _destroy: function() {
-        this.emit('destroy');
-        this._element = this._scope = null;
+      /**
+       * Make alert dialog cancelable or uncancelable. 
+       *
+       * @param {Boolean}
+       */
+      setCancelable: function(cancelable) {
+        if (typeof cancelable !== 'boolean') {
+          throw new Error('Argument must be a boolean.'); 
+        }  
+
+        if (cancelable) {
+          this._element.attr('cancelable', true);
+        } else {
+          this._element.removeAttr('cancelable');
+        }
+      },
+
+      isCancelable: function() {
+        return this._element[0].hasAttribute('cancelable');
+      },
+
+      _cancel: function() {
+        if (this.isCancelable()) {
+          this.hide({
+            callback: function () {
+              this.emit('cancel');
+            }.bind(this)
+          });
+        }
+      },
+
+      _onDeviceBackButton: function(event) {
+        if (this.isCancelable()) {
+          this._cancel.bind(this)();
+        } else {
+          event.callParentHandler();
+        }
+      },
+
+      _createMask: function(color) {
+        this._mask = angular.element('<div>').addClass('alert-dialog-mask').css({
+          zIndex: 20000,
+          display: 'none'
+        });
+
+        this._mask.on('click', this._cancel.bind(this));
+ 
+        if (color) {
+          this._mask.css('background-color', color);
+        }
+
+        angular.element(document.body).append(this._mask);
       }
     });
+
+    AlertDialogView._animatorDict = {
+      'default': $onsen.isAndroid() ? new AndroidAlertDialogAnimator() : new IOSAlertDialogAnimator(),
+      'fade': $onsen.isAndroid() ? new AndroidAlertDialogAnimator() : new IOSAlertDialogAnimator(),
+      'slide': new SlideDialogAnimator(),
+      'none': new DialogAnimator()
+    };
+
+    /**
+     * @param {String} name
+     * @param {DialogAnimator} animator
+     */
+    AlertDialogView.registerAnimator = function(name, animator) {
+      if (!(animator instanceof DialogAnimator)) {
+        throw new Error('"animator" param must be an instance of DialogAnimator');
+      }
+      this._animatorDict[name] = animator;
+    };
+
     MicroEvent.mixin(AlertDialogView);
 
     return AlertDialogView;
   }]);
+})();
+
+
+
+/*
+Copyright 2013-2014 ASIAL CORPORATION
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+*/
+
+(function() {
+  'use strict;';
+
+  var module = angular.module('onsen');
+
+  module.factory('AndroidAlertDialogAnimator', ['DialogAnimator', function(DialogAnimator) {
+
+    /**
+     * Android style animator for alert dialog.
+     */
+    var AndroidAlertDialogAnimator = DialogAnimator.extend({
+
+      timing: 'cubic-bezier(.1, .7, .4, 1)',
+      duration: 0.2, 
+
+      init: function(options) {
+        options = options || {};
+
+        this.timing = options.timing || this.timing;
+        this.duration = options.duration !== undefined ? options.duration : this.duration;
+      },
+
+      /**
+       * @param {Object} dialog
+       * @param {Function} callback
+       */
+      show: function(dialog, callback) {
+        callback = callback ? callback : function() {};
+
+        animit.runAll(
+
+          animit(dialog._mask[0])
+            .queue({
+              opacity: 0
+            })
+            .queue({
+              opacity: 1.0
+            }, {
+              duration: this.duration,
+              timing: this.timing
+            }),
+
+          animit(dialog._dialog[0])
+            .queue({
+              css: {
+                transform: 'translate3d(-50%, -50%, 0) scale3d(0.9, 0.9, 1.0)',
+                opacity: 0.0
+              },
+              duration: 0
+            })
+            .queue({
+              css: {
+                transform: 'translate3d(-50%, -50%, 0) scale3d(1.0, 1.0, 1.0)',
+                opacity: 1.0
+              },
+              duration: this.duration,
+              timing: this.timing
+            })
+            .resetStyle()
+            .queue(function(done) {
+              callback();
+              done();
+            })
+        );
+      },
+
+      /**
+       * @param {Object} dialog 
+       * @param {Function} callback
+       */
+      hide: function(dialog, callback) {
+        callback = callback ? callback : function() {};
+
+        animit.runAll(
+
+          animit(dialog._mask[0])
+            .queue({
+              opacity: 1.0
+            })
+            .queue({
+              opacity: 0
+            }, {
+              duration: this.duration,
+              timing: this.timing
+            }),
+
+          animit(dialog._dialog[0])
+            .queue({
+              css: {
+                transform: 'translate3d(-50%, -50%, 0) scale3d(1.0, 1.0, 1.0)',
+                opacity: 1.0
+              },
+              duration: 0
+            })
+            .queue({
+              css: {
+                transform: 'translate3d(-50%, -50%, 0) scale3d(0.9, 0.9, 1.0)',
+                opacity: 0.0
+              },
+              duration: this.duration,
+              timing: this.timing
+            })
+            .resetStyle()
+            .queue(function(done) {
+              callback();
+              done();
+            })
+
+        );
+      }
+    });
+
+    return AndroidAlertDialogAnimator;
+  }]);
+
+})();
+
+
+
+/*
+Copyright 2013-2014 ASIAL CORPORATION
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+*/
+
+(function() {
+  'use strict;';
+
+  var module = angular.module('onsen');
+
+  module.factory('AndroidDialogAnimator', ['DialogAnimator', function(DialogAnimator) {
+
+    /**
+     * Android style animator for dialog.
+     */
+    var AndroidDialogAnimator = DialogAnimator.extend({
+
+      timing: 'ease-in-out',
+      duration: 0.3, 
+
+      init: function(options) {
+        options = options || {};
+
+        this.timing = options.timing || this.timing;
+        this.duration = options.duration !== undefined ? options.duration : this.duration;
+      },
+
+      /**
+       * @param {Object} dialog
+       * @param {Function} callback
+       */
+      show: function(dialog, callback) {
+        callback = callback ? callback : function() {};
+
+        animit.runAll(
+
+          animit(dialog._mask[0])
+            .queue({
+              opacity: 0
+            })
+            .queue({
+              opacity: 1.0
+            }, {
+              duration: this.duration,
+              timing: this.timing
+            }),
+
+          animit(dialog._dialog[0])
+            .queue({
+              css: {
+                transform: 'translate3d(-50%, -60%, 0)',
+                opacity: 0.0
+              },
+              duration: 0
+            })
+            .queue({
+              css: {
+                transform: 'translate3d(-50%, -50%, 0)',
+                opacity: 1.0
+              },
+              duration: this.duration,
+              timing: this.timing
+            })
+            .resetStyle()
+            .queue(function(done) {
+              callback();
+              done();
+            })
+        );
+      },
+
+      /**
+       * @param {Object} dialog 
+       * @param {Function} callback
+       */
+      hide: function(dialog, callback) {
+        callback = callback ? callback : function() {};
+
+        animit.runAll(
+
+          animit(dialog._mask[0])
+            .queue({
+              opacity: 1.0
+            })
+            .queue({
+              opacity: 0
+            }, {
+              duration: this.duration,
+              timing: this.timing
+            }),
+
+          animit(dialog._dialog[0])
+            .queue({
+              css: {
+                transform: 'translate3d(-50%, -50%, 0)',
+                opacity: 1.0
+              },
+              duration: 0
+            })
+            .queue({
+              css: {
+                transform: 'translate3d(-50%, -60%, 0)',
+                opacity: 0.0
+              },
+              duration: this.duration,
+              timing: this.timing
+            })
+            .resetStyle()
+            .queue(function(done) {
+              callback();
+              done();
+            })
+
+        );
+      }
+    });
+
+    return AndroidDialogAnimator;
+  }]);
+
 })();
 
 
@@ -4668,13 +5196,84 @@ limitations under the License.
 
   var module = angular.module('onsen');
 
-  module.factory('CarouselView', ['$http', '$parse', '$templateCache', '$compile', '$onsen', '$timeout', function($http, $parse, $templateCache, $compile, $onsen, $timeout) {
+  module.factory('CarouselView', ['$onsen', function($onsen) {
+
+    var VerticalModeTrait = {
+
+      _getScrollDelta: function(event) {
+        return event.gesture.deltaY;
+      },
+
+      _getScrollVelocity: function(event) {
+        return event.gesture.velocityY;
+      },
+
+      _getElementSize: function() {
+        return this._element[0].getBoundingClientRect().height;
+      },
+
+      _generateScrollTransform: function(scroll) {
+        return 'translate3d(0px, ' + -scroll + 'px, 0px)';
+      },
+      
+      _layoutCarouselItems: function() {
+        var children = this._getCarouselItemElements();
+
+        var sizeAttr = this._getCarouselItemSizeAttr();
+        var sizeInfo = this._decomposeSizeString(sizeAttr);
+        
+        for (var i = 0; i < children.length; i++) {
+          angular.element(children[i]).css({
+            position: 'absolute',
+            height: sizeAttr,
+            width: '100%',
+            visibility: 'visible',
+            left: '0px',
+            top: (i * sizeInfo.number) + sizeInfo.unit
+          });
+        }
+      },
+    };
+
+    var HorizontalModeTrait = {
+
+      _getScrollDelta: function(event) {
+        return event.gesture.deltaX;
+      },
+
+      _getScrollVelocity: function(event) {
+        return event.gesture.velocityX;
+      },
+
+      _getElementSize: function() {
+        return this._element[0].getBoundingClientRect().width;
+      },
+
+      _generateScrollTransform: function(scroll) {
+        return 'translate3d(' + -scroll + 'px, 0px, 0px)';
+      },
+
+      _layoutCarouselItems: function() {
+        var children = this._getCarouselItemElements();
+
+        var sizeAttr = this._getCarouselItemSizeAttr();
+        var sizeInfo = this._decomposeSizeString(sizeAttr);
+        
+        for (var i = 0; i < children.length; i++) {
+          angular.element(children[i]).css({
+            position: 'absolute',
+            width: sizeAttr,
+            height: '100%',
+            top: '0px',
+            visibility: 'visible',
+            left: (i * sizeInfo.number) + sizeInfo.unit
+          });
+        }
+      },
+
+    };
 
     /**
-     * scroll
-     * |----------|----------|
-     * |          |          |
-     * |----------|----------|
      * @class CarouselView
      */
     var CarouselView = Class.extend({
@@ -4695,6 +5294,11 @@ limitations under the License.
       _doorLock: undefined,
 
       /**
+       * @member {Number}
+       */
+      _scroll: undefined,
+
+      /**
        * @param {Object} scope
        * @param {jqLite} element
        * @param {Object} attrs
@@ -4707,121 +5311,357 @@ limitations under the License.
         this._doorLock = new DoorLock();
         this._scroll = 0;
 
+        this._bindedOnDrag = this._onDrag.bind(this);
+        this._bindedOnDragEnd = this._onDragEnd.bind(this);
+
+        this._mixin(this._isVertical() ? VerticalModeTrait : HorizontalModeTrait);
+
         this._prepareEventListeners();
-        this._layoutItems();
+        this._layoutCarouselItems();
+        this._setupInitialIndex();
 
         this._scope.$on('$destroy', this._destroy.bind(this));
       },
 
-      _layoutItems: function() {
-        var children = this._element.children();
-        
-        for (var i = 0; i < children.length; i++) {
-          angular.element(children[i]).css({
-            position: 'absolute',
-            width: '100%',
-            height: '100%',
-            top: '0px',
-            left: (i * 100) + '%'
-          });
+      /**
+       * @return {Number}
+       */
+      _getCarouselItemSize: function() {
+        var sizeAttr = this._getCarouselItemSizeAttr();
+        var sizeInfo = this._decomposeSizeString(sizeAttr);
+        var elementSize = this._getElementSize();
+
+        if (sizeInfo.unit === '%') {
+          return Math.round(sizeInfo.number / 100 * elementSize);
+        } else if (sizeInfo.unit === 'px') {
+          return sizeInfo.number;
+        } else {
+          throw new Error('Invalid state');
         }
+      },
+
+      /**
+       * @return {Number}
+       */
+      _getInitialIndex: function() {
+        var index = parseInt(this._element.attr('initial-index'), 10);
+
+        if (typeof index === 'number' && !isNaN(index)) {
+          return Math.max(Math.min(index, this._getCarouselItemCount() - 1), 0);
+        } else {
+          return 0;
+        }
+      },
+
+      /**
+       * @return {String}
+       */
+      _getCarouselItemSizeAttr: function() {
+        var attrName = 'item-' + (this._isVertical() ? 'height' : 'width');
+        var itemSizeAttr = ('' + this._element.attr(attrName)).trim();
+
+        return itemSizeAttr.match(/^\d+(px|%)$/) ? itemSizeAttr : '100%';
+      },
+
+      /**
+       * @return {Object}
+       */
+      _decomposeSizeString: function(size) {
+        var matches = size.match(/^(\d+)(px|%)/);
+
+        return {
+          number: parseInt(matches[1], 10),
+          unit: matches[2],
+        };
+      },
+
+      _setupInitialIndex: function() {
+        this._scroll = this._getCarouselItemSize() * this._getInitialIndex();
+        this._scrollTo(this._scroll);
+      },
+
+      /**
+       * @param {Boolean} swipable
+       */
+      setSwipable: function(swipable) {
+        if (swipable) {
+          this._element[0].setAttribute('swipable', '');
+        } else {
+          this._element[0].removeAttribute('swipable');
+        }
+      },
+
+      /**
+       * @return {Boolean}
+       */
+      isSwipable: function() {
+        return this._element[0].hasAttribute('swipable');
+      },
+
+      /**
+       * @param {Boolean} draggable
+       */
+      setDraggable: function(draggable) {
+        if (draggable) {
+          this._element[0].setAttribute('draggable', '');
+        } else {
+          this._element[0].removeAttribute('draggable');
+        }
+      },
+
+      /**
+       * @return {Boolean}
+       */
+      isDraggable: function() {
+        return this._element[0].hasAttribute('draggable');
+      },
+
+      /**
+       * @param {Number} index
+       * @param {Object} [options]
+       * @param {Function} [options.callback]
+       * @param {String} [options.animation]
+       */
+      setActiveCarouselItemIndex: function(index, options) {
+        options = options || {};
+
+        index = Math.max(0, Math.min(index, this._getCarouselItemCount() - 1));
+        var scroll = this._getCarouselItemSize() * index;
+        var max = this._calculateMaxScroll();
+
+        this._scroll = Math.max(0, Math.min(max, scroll));
+        this._scrollTo(this._scroll, options.animation !== 'none');
+      },
+
+      /**
+       * @return {Number}
+       */
+      getActiveCarouselItemIndex: function() {
+        var scroll = this._scroll;
+        var count = this._getCarouselItemCount();
+        var size = this._getCarouselItemSize();
+
+        for (var i = 0; i < count; i++) {
+          if (size * i <= scroll && size * (i + 1) > scroll) {
+            return i;
+          }
+        }
+        throw new Error('invalid state');
+      },
+
+      /**
+       * @param {Object} [options]
+       * @param {Function} [options.callback]
+       * @param {String} [options.animation]
+       */
+      next: function(options) {
+        this.setActiveCarouselItemIndex(this.getActiveCarouselItemIndex() + 1, options);
+      },
+
+      /**
+       * @param {Object} [options]
+       * @param {Function} [options.callback]
+       * @param {String} [options.animation]
+       */
+      prev: function(options) {
+        this.setActiveCarouselItemIndex(this.getActiveCarouselItemIndex() - 1, options);
+      },
+
+      /**
+       * @param {Boolean} enabled
+       */
+      setAutoScrollEnabled: function(enabled) {
+        if (enabled) {
+          this._element[0].setAttribute('autoscroll', '');
+        } else {
+          this._element[0].removeAttribute('autoscroll');
+        }
+      },
+
+      /**
+       * @param {Boolean} enabled
+       */
+      isAutoScrollEnabled: function(enabled) {
+        return this._element[0].hasAttribute('autoscroll');
+      },
+
+      /**
+       * @param {Boolean} disabled
+       */
+      setDisabled: function(disabled) {
+        if (disabled) {
+          this._element[0].setAttribute('disabled', '');
+        } else {
+          this._element[0].removeAttribute('disabled');
+        }
+      },
+
+      /**
+       * @return {Boolean}
+       */
+      isDisabled: function() {
+        return this._element[0].hasAttribute('disabled');
+      },
+
+      /**
+       * @param {Boolean} scrollable
+       */
+      setOverscrollable: function(scrollable) {
+        if (scrollable) {
+          this._element[0].setAttribute('overscrollable', '');
+        } else {
+          this._element[0].removeAttribute('overscrollable');
+        }
+      },
+
+      /**
+       * @param {Object} trait
+       */
+      _mixin: function(trait) {
+        Object.keys(trait).forEach(function(key) {
+          this[key] = trait[key];
+        }.bind(this));
+      },
+
+      /**
+       * @return {Boolean}
+       */
+      _isVertical: function() {
+        return this._element.attr('direction') === 'vertical';
       },
 
       _prepareEventListeners: function() {
         this._hammer = new Hammer(this._element[0]);
 
-        var scrollTo = function() {
-        }.bind(this);
+        this._hammer.on('drag', this._bindedOnDrag);
+        this._hammer.on('dragend', this._bindedOnDragEnd);
+      },
 
-        this._hammer.on('drag', function(event) {
-          var scroll = this._scroll - event.gesture.deltaX;
-          this._scrollTo(scroll);
-        }.bind(this));
+      _onDrag: function(event) {
+        this._lastDragEvent = event;
 
-        this._hammer.on('dragend', function(event) {
-          this._scroll = this._scroll - event.gesture.deltaX;
-          if (this._isOverScroll(this._scroll)) {
-            this._scrollToKillOverScroll();
-          } else {
-            this._startMomemtumScroll(event);
-          }
-        }.bind(this));
+        var scroll = this._scroll - this._getScrollDelta(event);
+        this._scrollTo(scroll);
+        event.gesture.preventDefault();
+      },
+
+      _onDragEnd: function(event) {
+        this._scroll = this._scroll - this._getScrollDelta(event);
+        if (this._isOverScroll(this._scroll)) {
+          this._scrollToKillOverScroll();
+        } else if (this._lastDragEvent !== null) {
+          this._startMomemtumScroll(event);
+        }
+        this._lastDragEvent = null;
+        event.gesture.preventDefault();
+      },
+
+      /**
+       * @return {Boolean}
+       */
+      isOverscrollable: function() {
+        return this._element[0].hasAttribute('overscrollable');
       },
 
       _startMomemtumScroll: function(event) {
-        var velocity = event.gesture.velocityX;
-        var duration = 0.3;
-        var scrollDelta = duration * 1000 * velocity;
-        console.log(scrollDelta);
-        var scroll = this._scroll + (event.gesture.deltaX > 0 ? -scrollDelta : scrollDelta);
-        scroll = this._normalizeScrollPosition(scroll);
+        if (this._lastDragEvent !== null) {
+          var velocity = this._getScrollVelocity(this._lastDragEvent);
+          var duration = 0.3;
+          var scrollDelta = duration * 100 * velocity;
+          var scroll = this._scroll + (this._getScrollDelta(this._lastDragEvent) > 0 ? -scrollDelta : scrollDelta);
+          scroll = this._normalizeScrollPosition(scroll);
 
-        this._scroll = Math.min(Math.max(scroll, 0), this._calculateMaxScroll());
+          this._scroll = scroll;
 
-        animit(this._getItemElements())
-          .queue({
-            transform: 'translate3d(' + -this._scroll + 'px, 0px, 0px)'
-          }, {
-            duration: duration,
-            timing: 'cubic-bezier(.1, .7, .1, 1)'
-          })
-          .play();
+          animit(this._getCarouselItemElements())
+            .queue({
+              transform: this._generateScrollTransform(this._scroll)
+            }, {
+              duration: duration,
+              timing: 'cubic-bezier(.1, .7, .1, 1)'
+            })
+            .play();
+        }
       },
 
       _normalizeScrollPosition: function(scroll) {
-        var arr = [];
-        var width = this._element[0].getBoundingClientRect().width;
-        for (var i = 0; i < this._getItemCount(); i++) {
-          arr.push(i * width);
+        var max = this._calculateMaxScroll();
+
+        if (this.isAutoScrollEnabled()) {
+          var arr = [];
+          var size = this._getCarouselItemSize();
+
+          for (var i = 0; i < this._getCarouselItemCount(); i++) {
+            if (max >= i * size) { 
+              arr.push(i * size);
+            }
+          }
+          arr.push(max);
+
+          arr.sort(function(left, right) {
+            left = Math.abs(left - scroll);
+            right = Math.abs(right - scroll);
+
+            return left - right;
+          });
+
+          return arr[0];
+        } else {
+          return Math.max(0, Math.min(max, scroll));
         }
-        arr.sort(function(left, right) {
-          var left = Math.abs(left - scroll);
-          var right = Math.abs(right - scroll);
-
-          return left - right;
-        });
-
-        return arr[0];
       },
 
-      _updateLayout: function() {
-        //...
-      },
-
-      _getItemElements: function() {
+      /**
+       * @return {Array}
+       */
+      _getCarouselItemElements: function() {
         var items = [];
         var children = this._element.children();
 
         for (var i = 0; i < children.length; i++) {
-          items.push(children[i]);
+          if (children[i].nodeName.toLowerCase() === 'ons-carousel-item') {
+            items.push(children[i]);
+          }
         }
 
         return items;
       },
 
-      _scrollTo: function(scroll) {
-        var items = [];
+      /**
+       * @param {Number} scroll
+       * @param {Boolean} animate
+       */
+      _scrollTo: function(scroll, animate) {
         var self = this;
-        var children = this._element.children();
+        var isOverscrollable = this.isOverscrollable();
 
-        for (var i = 0; i < children.length; i++) {
-          items.push(children[i]);
+        if (animate) {
+          animit(this._getCarouselItemElements())
+            .queue({
+              transform: this._generateScrollTransform(normalizeScroll(scroll))
+            }, {
+              duration: 0.3,
+              timing: 'cubic-bezier(.1, .7, .1, 1)'
+            })
+            .play();
+        } else {
+          animit(this._getCarouselItemElements())
+            .queue({
+              transform: this._generateScrollTransform(normalizeScroll(scroll))
+            })
+            .play();
         }
 
-        animit(items)
-          .queue({transform: 'translate3d(' + -normalizeScroll(scroll) + 'px, 0px, 0px)'})
-          .play();
-
         function normalizeScroll(scroll) {
-          var ratio = 0.2;
+          var ratio = 0.35;
 
           if (scroll < 0) {
-            return Math.round(scroll * ratio);
+            return isOverscrollable ? Math.round(scroll * ratio) : 0;
           }
 
           var maxScroll = self._calculateMaxScroll();
           if (maxScroll < scroll) {
-            return maxScroll + Math.round((scroll - maxScroll) * ratio);
+            return isOverscrollable ? maxScroll + Math.round((scroll - maxScroll) * ratio) : maxScroll;
           }
 
           return scroll;
@@ -4829,7 +5669,7 @@ limitations under the License.
       },
 
       _calculateMaxScroll: function() {
-        return (this._getItemCount() - 1) * this._element[0].getBoundingClientRect().width;
+        return this._getCarouselItemCount() * this._getCarouselItemSize() - this._getElementSize();
       },
 
       _isOverScroll: function(scroll) {
@@ -4840,27 +5680,30 @@ limitations under the License.
       },
 
       _scrollToKillOverScroll: function() {
+        var duration = 0.4;
+        
         if (this._scroll < 0) {
-          animit(this._getItemElements())
+          animit(this._getCarouselItemElements())
             .queue({
-              transform: 'translate3d(0px, 0px, 0px)'
+              transform: this._generateScrollTransform(0)
             }, {
-              duration: 0.1,
-              timing: 'cubic-bezier(.1, .7, .1, 1)'
+              duration: duration,
+              timing: 'cubic-bezier(.1, .4, .1, 1)'
             })
             .play();
           this._scroll = 0;
           return;
         }
 
-        var maxScroll = (this._getItemCount() - 1) * this._element[0].getBoundingClientRect().width;
+        var maxScroll = this._calculateMaxScroll();
+
         if (maxScroll < this._scroll) {
-          animit(this._getItemElements())
+          animit(this._getCarouselItemElements())
             .queue({
-              transform: 'translate3d(' + -maxScroll + 'px, 0px, 0px)'
+              transform: this._generateScrollTransform(maxScroll)
             }, {
-              duration: 0.1,
-              timing: 'cubic-bezier(.1, .7, .1, 1)'
+              duration: duration,
+              timing: 'cubic-bezier(.1, .4, .1, 1)'
             })
             .play();
           this._scroll = maxScroll;
@@ -4870,21 +5713,30 @@ limitations under the License.
         return;
       },
 
-      _getItemCount: function() {
-        return this._element.children().length;
+      /**
+       * @return {Number}
+       */
+      _getCarouselItemCount: function() {
+        return this._getCarouselItemElements().length;
       },
 
       /**
-       *
+       * Refresh carousel item layout.
        */
       refresh: function() {
-
+        this._mixin(this._isVertical() ? VerticalModeTrait : HorizontalModeTrait);
+        this._layoutCarouselItems();
       },
 
       _destroy: function() {
         this.emit('destroy', {navigator: this});
-      }
 
+        this._hammer.off('drag', this._bindedOnDrag);
+        this._hammer.off('dragend', this._bindedOnDragEnd);
+
+        // Remove event listeners
+        this._element = this._scope = this._attrs = null;
+      }
     });
 
     MicroEvent.mixin(CarouselView);
@@ -4892,6 +5744,296 @@ limitations under the License.
     return CarouselView;
   }]);
 })();
+
+/*
+Copyright 2013-2014 ASIAL CORPORATION
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+*/
+
+(function() {
+  'use strict';
+
+  var module = angular.module('onsen');
+
+  module.factory('DialogView', ['$onsen', 'DialogAnimator', 'IOSDialogAnimator', 'AndroidDialogAnimator', 'SlideDialogAnimator', function($onsen, DialogAnimator, IOSDialogAnimator, AndroidDialogAnimator, SlideDialogAnimator) {
+
+    var DialogView = Class.extend({
+
+      /**
+       * @param {Object} scope
+       * @param {jqLite} element
+       * @param {Object} attrs
+       */
+      init: function(scope, element, attrs) {
+        this._scope = scope;
+        this._element = element;
+
+        this._element.css('display', 'none');
+
+        this._dialog = angular.element(element[0].querySelector('.dialog'));
+        this._mask = angular.element(element[0].querySelector('.dialog-mask'));
+
+        this._dialog.css('z-index', 20001);
+        this._mask.css('z-index', 20000);
+
+        this._mask.on('click', this._cancel.bind(this));
+
+        this._visible = false;
+        this._doorLock = new DoorLock();
+
+        this._animation = DialogView._animatorDict[typeof attrs.animation !== 'undefined' ? 
+          attrs.animation : 'default'];
+
+        if (!this._animation) {
+          throw new Error('No such animation: ' + attrs.animation);
+        }
+
+        this._deviceBackButtonHandler = $onsen.DeviceBackButtonHandler.create(this._element, this._onDeviceBackButton.bind(this));
+      },
+
+      /**
+       * Show dialog.
+       *
+       * @param {Object} [options]
+       * @param {String} [options.animation] animation type
+       * @param {Function} [options.callback] callback after dialog is shown
+       */
+      show: function(options) {
+        options = options || {};
+        var cancel = false,
+          callback = options.callback || function() {};
+
+        this.emit('preshow', {
+          dialog: this,
+          cancel: function() { cancel = true; }
+        });
+        
+        if (!cancel) {
+          this._doorLock.waitUnlock(function() {
+            var unlock = this._doorLock.lock(),
+              animation = this._animation;
+
+            this._element.css('display', 'block');
+            this._mask.css('opacity', 1);
+
+            if (options.animation) {
+              animation = DialogView._animatorDict[options.animation];
+            }
+            
+            animation.show(this, function() {
+              this._visible = true;
+              unlock();
+              this.emit('postshow', {dialog: this});
+              callback();
+            }.bind(this));
+          }.bind(this));
+        }
+      },
+
+      /**
+       * Hide dialog.
+       *
+       * @param {Object} [options]
+       * @param {String} [options.animation] animation type
+       * @param {Function} [options.callback] callback after dialog is hidden
+       */
+      hide: function(options) {
+        options = options || {};
+        var cancel = false,
+          callback = options.callback || function() {};
+        
+        this.emit('prehide', {
+          dialog: this,
+          cancel: function() { cancel = true; }
+        });
+
+        if (!cancel) {
+          this._doorLock.waitUnlock(function() {
+            var unlock = this._doorLock.lock(),
+              animation = this._animation;
+
+            if (options.animation) {
+              animation = DialogView._animatorDict[options.animation];
+            }
+
+            animation.hide(this, function() {
+              this._element.css('display', 'none');
+              this._visible = false;
+              unlock();
+              this.emit('posthide', {dialog: this});
+              callback();
+            }.bind(this));
+          }.bind(this));
+        }
+      },
+
+      /**
+       * True if dialog is visible.
+       *
+       * @return {Boolean}
+       */
+      isShown: function() {
+        return this._visible;
+      },
+
+      /**
+       * Destroy dialog.
+       */
+      destroy: function() {
+        this._element.remove();
+        this._deviceBackButtonHandler.destroy();
+        this._mask.off();
+
+        this._scope.$destroy();
+
+        this._deviceBackButtonHandler = this._element = this._dialog = this._mask = null;
+      },
+
+      /**
+       * Disable or enable dialog.
+       *
+       * @param {Boolean} 
+       */
+      setDisabled: function(disabled) {
+        if (typeof disabled !== 'boolean') {
+          throw new Error('Argument must be a boolean.');
+        }
+
+        if (disabled) {
+          this._element.attr('disabled', true);
+        } else {
+          this._element.removeAttr('disabled');
+        }
+      },
+
+      /**
+       * True if dialog is disabled.
+       *
+       * @return {Boolean}
+       */
+      isDisabled: function() {
+        return this._element[0].hasAttribute('disabled');
+      },
+
+      /**
+       * Make dialog cancelable or uncancelable. 
+       *
+       * @param {Boolean}
+       */
+      setCancelable: function(cancelable) {
+        if (typeof cancelable !== 'boolean') {
+          throw new Error('Argument must be a boolean.'); 
+        }  
+
+        if (cancelable) {
+          this._element.attr('cancelable', true);
+        } else {
+          this._element.removeAttr('cancelable');
+        }
+      },
+
+      /**
+       * True if the dialog is cancelable.
+       *
+       * @return {Boolean}
+       */
+      isCancelable: function() {
+        return this._element[0].hasAttribute('cancelable');
+      },
+
+      _cancel: function() {
+        if (this.isCancelable()) {
+          this.hide({
+            callback: function () {
+              this.emit('cancel');
+            }.bind(this)
+          });
+        }
+      },
+
+      _onDeviceBackButton: function(event) {
+        if (this.isCancelable()) {
+          this._cancel.bind(this)();
+        } else {
+          event.callParentHandler();
+        }
+      }
+    });
+
+    DialogView._animatorDict = {
+      'default': $onsen.isAndroid() ? new AndroidDialogAnimator() : new IOSDialogAnimator(),
+      'fade': $onsen.isAndroid() ? new AndroidDialogAnimator() : new IOSDialogAnimator(),
+      'slide': new SlideDialogAnimator(),
+      'none': new DialogAnimator()
+    };
+
+    /**
+     * @param {String} name
+     * @param {DialogAnimator} animator
+     */
+    DialogView.registerAnimator = function(name, animator) {
+      if (!(animator instanceof DialogAnimator)) {
+        throw new Error('"animator" param must be an instance of DialogAnimator');
+      }
+      this._animatorDict[name] = animator;
+    };
+
+    MicroEvent.mixin(DialogView);
+
+    return DialogView;
+  }]);
+})();
+
+
+/*
+Copyright 2013-2014 ASIAL CORPORATION
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+*/
+
+(function() {
+  'use strict;';
+
+  var module = angular.module('onsen');
+
+  module.factory('DialogAnimator', function() {
+    var DialogAnimator = Class.extend({
+      show: function(dialog, callback) {
+        callback();
+      },
+
+      hide: function(dialog, callback) {
+        callback();
+      }
+    });
+
+    return DialogAnimator;
+  });
+})();
+
 
 /*
 Copyright 2013-2014 ASIAL CORPORATION
@@ -5070,6 +6212,272 @@ limitations under the License.
   }]);
 })();
 
+
+/*
+Copyright 2013-2014 ASIAL CORPORATION
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+*/
+
+(function() {
+  'use strict;';
+
+  var module = angular.module('onsen');
+
+  module.factory('IOSAlertDialogAnimator', ['DialogAnimator', function(DialogAnimator) {
+
+    /**
+     * iOS style animator for alert dialog.
+     */
+    var IOSAlertDialogAnimator = DialogAnimator.extend({
+
+      timing: 'cubic-bezier(.1, .7, .4, 1)',
+      duration: 0.2, 
+
+      init: function(options) {
+        options = options || {};
+
+        this.timing = options.timing || this.timing;
+        this.duration = options.duration !== undefined ? options.duration : this.duration;
+      },
+
+      /**
+       * @param {Object} dialog
+       * @param {Function} callback
+       */
+      show: function(dialog, callback) {
+        callback = callback ? callback : function() {};
+
+        animit.runAll(
+
+          animit(dialog._mask[0])
+            .queue({
+              opacity: 0
+            })
+            .queue({
+              opacity: 1.0
+            }, {
+              duration: this.duration,
+              timing: this.timing
+            }),
+
+          animit(dialog._dialog[0])
+            .queue({
+              css: {
+                transform: 'translate3d(-50%, -50%, 0) scale3d(1.3, 1.3, 1.0)',
+                opacity: 0.0
+              },
+              duration: 0
+            })
+            .queue({
+              css: {
+                transform: 'translate3d(-50%, -50%, 0) scale3d(1.0, 1.0, 1.0)',
+                opacity: 1.0
+              },
+              duration: this.duration,
+              timing: this.timing
+            })
+            .resetStyle()
+            .queue(function(done) {
+              callback();
+              done();
+            })
+        );
+      },
+
+      /**
+       * @param {Object} dialog 
+       * @param {Function} callback
+       */
+      hide: function(dialog, callback) {
+        callback = callback ? callback : function() {};
+
+        animit.runAll(
+
+          animit(dialog._mask[0])
+            .queue({
+              opacity: 1.0
+            })
+            .queue({
+              opacity: 0
+            }, {
+              duration: this.duration,
+              timing: this.timing
+            }),
+
+          animit(dialog._dialog[0])
+            .queue({
+              css: {
+                opacity: 1.0
+              },
+              duration: 0
+            })
+            .queue({
+              css: {
+                opacity: 0.0
+              },
+              duration: this.duration,
+              timing: this.timing
+            })
+            .resetStyle()
+            .queue(function(done) {
+              callback();
+              done();
+            })
+
+        );
+      }
+    });
+
+    return IOSAlertDialogAnimator;
+  }]);
+
+})();
+
+
+
+/*
+Copyright 2013-2014 ASIAL CORPORATION
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+*/
+
+(function() {
+  'use strict;';
+
+  var module = angular.module('onsen');
+
+  module.factory('IOSDialogAnimator', ['DialogAnimator', function(DialogAnimator) {
+
+    /**
+     * iOS style animator for dialog.
+     */
+    var IOSDialogAnimator = DialogAnimator.extend({
+
+      timing: 'ease-in-out',
+      duration: 0.3, 
+
+      init: function(options) {
+        options = options || {};
+
+        this.timing = options.timing || this.timing;
+        this.duration = options.duration !== undefined ? options.duration : this.duration;
+      },
+
+      /**
+       * @param {Object} dialog
+       * @param {Function} callback
+       */
+      show: function(dialog, callback) {
+        callback = callback ? callback : function() {};
+
+        animit.runAll(
+
+          animit(dialog._mask[0])
+            .queue({
+              opacity: 0
+            })
+            .queue({
+              opacity: 1.0
+            }, {
+              duration: this.duration,
+              timing: this.timing
+            }),
+
+          animit(dialog._dialog[0])
+            .queue({
+              css: {
+                transform: 'translate3d(-50%, 300%, 0)'
+              },
+              duration: 0
+            })
+            .queue({
+              css: {
+                transform: 'translate3d(-50%, -50%, 0)'
+              },
+              duration: this.duration,
+              timing: this.timing
+            })
+            .resetStyle()
+            .queue(function(done) {
+              callback();
+              done();
+            })
+        );
+      },
+
+      /**
+       * @param {Object} dialog 
+       * @param {Function} callback
+       */
+      hide: function(dialog, callback) {
+        callback = callback ? callback : function() {};
+
+        animit.runAll(
+
+          animit(dialog._mask[0])
+            .queue({
+              opacity: 1.0
+            })
+            .queue({
+              opacity: 0
+            }, {
+              duration: this.duration,
+              timing: this.timing
+            }),
+
+          animit(dialog._dialog[0])
+            .queue({
+              css: {
+                transform: 'translate3d(-50%, -50%, 0)'
+              },
+              duration: 0
+            })
+            .queue({
+              css: {
+                transform: 'translate3d(-50%, 300%, 0)'
+              },
+              duration: this.duration,
+              timing: this.timing
+            })
+            .resetStyle()
+            .queue(function(done) {
+              callback();
+              done();
+            })
+
+        );
+      }
+    });
+
+    return IOSDialogAnimator;
+  }]);
+
+})();
+
+
 /*
 Copyright 2013-2014 ASIAL CORPORATION
 
@@ -5145,6 +6553,18 @@ limitations under the License.
         }
       },
 
+      _shouldAnimateToolbar: function(enterPage, leavePage) {
+        var bothPageHasToolbar =
+          enterPage.getPageView().hasToolbarElement() &&
+          leavePage.getPageView().hasToolbarElement();
+
+        var noAndroidLikeToolbar =
+          !angular.element(enterPage.getPageView().getToolbarElement()).hasClass('navigation-bar--android') &&
+          !angular.element(leavePage.getPageView().getToolbarElement()).hasClass('navigation-bar--android');
+
+        return bothPageHasToolbar && noAndroidLikeToolbar;
+      },
+
       /**
        * @param {Object} enterPage
        * @param {Object} leavePage
@@ -5179,15 +6599,9 @@ limitations under the License.
             done();
           });
 
-        var bothPageHasToolbar =
-          enterPage.getPageView().hasToolbarElement() &&
-          leavePage.getPageView().hasToolbarElement();
+        var shouldAnimateToolbar = this._shouldAnimateToolbar(enterPage, leavePage);
 
-        var isToolbarNothing = 
-          !enterPage.getPageView().hasToolbarElement() &&
-          !leavePage.getPageView().hasToolbarElement();
-
-        if (bothPageHasToolbar) {
+        if (shouldAnimateToolbar) {
           animit.runAll(
 
             maskClear,
@@ -5387,16 +6801,9 @@ limitations under the License.
             done();
           });
 
+        var shouldAnimateToolbar = this._shouldAnimateToolbar(enterPage, leavePage);
 
-        var bothPageHasToolbar =
-          enterPage.getPageView().hasToolbarElement() &&
-          leavePage.getPageView().hasToolbarElement();
-
-        var isToolbarNothing = 
-          !enterPage.getPageView().hasToolbarElement() &&
-          !leavePage.getPageView().hasToolbarElement();
-
-        if (bothPageHasToolbar || isToolbarNothing) {
+        if (shouldAnimateToolbar) {
           animit.runAll(
 
             maskClear,
@@ -7724,6 +9131,138 @@ limitations under the License.
 })();
 
 
+
+/*
+Copyright 2013-2014 ASIAL CORPORATION
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+*/
+
+(function() {
+  'use strict;';
+
+  var module = angular.module('onsen');
+
+  module.factory('SlideDialogAnimator', ['DialogAnimator', function(DialogAnimator) {
+
+    /**
+     * Slide animator for dialog.
+     */
+    var SlideDialogAnimator = DialogAnimator.extend({
+
+      timing: 'cubic-bezier(.1, .7, .4, 1)',
+      duration: 0.2, 
+
+      init: function(options) {
+        options = options || {};
+
+        this.timing = options.timing || this.timing;
+        this.duration = options.duration !== undefined ? options.duration : this.duration;
+      },
+
+      /**
+       * @param {Object} dialog
+       * @param {Function} callback
+       */
+      show: function(dialog, callback) {
+        callback = callback ? callback : function() {};
+
+        animit.runAll(
+
+          animit(dialog._mask[0])
+            .queue({
+              opacity: 0
+            })
+            .queue({
+              opacity: 1.0
+            }, {
+              duration: this.duration,
+              timing: this.timing
+            }),
+
+          animit(dialog._dialog[0])
+            .queue({
+              css: {
+                transform: 'translate3D(-50%, -350%, 0)',
+              },
+              duration: 0
+            })
+            .queue({
+              css: {
+                transform: 'translate3D(-50%, -50%, 0)',
+              },
+              duration: this.duration,
+              timing: this.timing
+            })
+            .resetStyle()
+            .queue(function(done) {
+              callback();
+              done();
+            })
+        );
+      },
+
+      /**
+       * @param {Object} dialog 
+       * @param {Function} callback
+       */
+      hide: function(dialog, callback) {
+        callback = callback ? callback : function() {};
+
+        animit.runAll(
+
+          animit(dialog._mask[0])
+            .queue({
+              opacity: 1.0
+            })
+            .queue({
+              opacity: 0
+            }, {
+              duration: this.duration,
+              timing: this.timing
+            }),
+
+          animit(dialog._dialog[0])
+            .queue({
+              css: {
+                transform: 'translate3D(-50%, -50%, 0)'
+              },
+              duration: 0
+            })
+            .queue({
+              css: {
+                transform: 'translate3D(-50%, -350%, 0)'
+              },
+              duration: this.duration,
+              timing: this.timing
+            })
+            .resetStyle()
+            .queue(function(done) {
+              callback();
+              done();
+            })
+
+        );
+      }
+    });
+
+    return SlideDialogAnimator;
+  }]);
+
+})();
+
+
 /*
 Copyright 2013-2014 ASIAL CORPORATION
 
@@ -8307,7 +9846,7 @@ limitations under the License.
        */
       close: function(options) {
         options = options || {};
-        options = typeof options == "function" ? {callback: options} : options;
+        options = typeof options == 'function' ? {callback: options} : options;
         
         this.emit('preclose');
 
@@ -8319,7 +9858,7 @@ limitations under the License.
       _close: function(options) {
         var callback = options.callback || function() {},
             unlock = this._doorLock.lock(),
-            instant = options.animation == "none";
+            instant = options.animation == 'none';
 
         this._animator.closeMenu(function() {
           unlock();
@@ -8339,7 +9878,7 @@ limitations under the License.
        */
       open: function(options) {
         options = options || {};
-        options = typeof options == "function" ? {callback: options} : options;
+        options = typeof options == 'function' ? {callback: options} : options;
 
         this.emit('preopen');
 
@@ -8351,7 +9890,7 @@ limitations under the License.
       _open: function(options) {
         var callback = options.callback || function() {},
             unlock = this._doorLock.lock(),
-            instant = options.animation == "none";
+            instant = options.animation == 'none';
 
         this._animator.openMenu(function() {
           unlock();
@@ -8713,7 +10252,7 @@ limitations under the License.
           return $onsGlobal.orientation.isLandscape();
         } else if (c.substr(0,5) == 'width') {
           var num = c.split(' ')[1];
-          if (num.indexOf("px") >= 0) {
+          if (num.indexOf('px') >= 0) {
             num = num.substr(0,num.length-2);
           }
           return isNumber(num) && window.innerWidth < num;
@@ -9285,15 +10824,74 @@ limitations under the License.
  * @name ons-alert-dialog
  * @description 
  *  [en]Alert dialog that is displayed on top of current screen.[/en]
- *  [ja][/ja]
+ *  [ja]現在のスクリーンにアラートダイアログを表示します。[/ja]
  * @param var 
  *  [en]Variable name to refer this alert dialog.[/en]
- *  [ja][/ja]
+ *  [ja]このアラートダイアログを参照するための名前を指定します。[/ja]
+ * @param modifier
+ *  [en]The appearance of the dialog.[/en]
+ *  [ja]ダイアログの表現を指定します。[/ja]
+ * @param cancelable
+ *  [en]If this attribute is set the dialog can be closed by tapping the background or pressing the back button.[/en] 
+ *  [ja]この属性があると、ダイアログが表示された時に、背景やバックボタンをタップした時にダイアログを閉じます。[/ja]
+ * @param disabled
+ *  [en]If this attribute is set the dialog is disabled.[/en]
+ *  [ja]この属性がある時、アラートダイアログはdisabled状態になります。[/ja]
+ * @param animation
+ *  [en]The animation used when showing an hiding the dialog. Can be either "none" or "default".[/en]
+ *  [ja]ダイアログを表示する際のアニメーション名を指定します。[/ja]
+ * @param mask-color
+ *  [en]Color of the background mask. Default is "rgba(0, 0, 0, 0.2)".[/en]
+ *  [ja]背景のマスクの色を指定します。デフォルトは"rgba(0, 0, 0, 0.2)"です。[/ja]
+ * @property show(options)
+ *  [en]Show the alert dialog.[/en]
+ *  [ja]ダイアログを開きます。[/ja]
+ * @property hide(options)
+ *  [en]Hide the alert dialog.[/en]
+ *  [ja]ダイアログを閉じます。[/ja]
+ * @property isShown()
+ *  [en]Returns whether the dialog is visible or not.[/en]
+ *  [ja]ダイアログが表示されているかどうかを返します。[/ja]
+ * @property destroy()
+ *  [en]Destroy the alert dialog and remove it from the DOM tree.[/en]
+ *  [ja]ダイアログを破棄して、DOMツリーから取り除きます。[/ja]
+ * @property setCancelable(cancelable)
+ *  [en]Set whether the dialog can be canceled by the user when it is shown.[/en]
+ *  [ja]アラートダイアログを表示した際に、ユーザがそのダイアログをキャンセルできるかどうかを指定します。[/ja]
+ * @property isCancelable()
+ *  [en]Returns whether the dialog is cancelable or not.[/en]
+ *  [ja]このアラートダイアログがキャンセル可能かどうかを返します。[/ja]
+ * @property setDisabled(disabled)
+ *  [en]Disable or enable the alert dialog.[/en]
+ *  [ja]このアラートダイアログをdisabled状態にするかどうかを設定します。[/ja]
+ * @property isDisabled()
+ *  [en]Returns whether the dialog is disabled or enabled.[/en]
+ *  [ja]このアラートダイアログがdisabled状態かどうかを返します。[/ja]
+ * @property on(eventName,listener)
+ *  [en]Add an event listener. Preset events are preshow, postshow, prehide and posthide.[/en]
+ *  [ja]イベントリスナーを追加します。preshow, postshow, prehide, posthideを指定できます。[/ja]
  * @example
- * <ons-alert-dialog>
- *   ...
- * </ons-alert-dialog>
+ * <script>
+ *   ons.ready(function() {
+ *     ons.createAlertDialog('alert.html').then(function(alertDialog) {
+ *       alertDialog.show();   
+ *     });
+ *   });
+ * </script>
+ *
+ * <script type="text/ons-template" id="alert.html">
+ *   <ons-alert-dialog animation="default" cancelable>
+ *     <div class="alert-dialog-title">Warning!</div>
+ *     <div class="alert-dialog-content">
+ *      An error has occurred!
+ *     </div>
+ *     <div class="alert-dialog-footer">
+ *       <button class="alert-dialog-button">OK</button>
+ *     </div>
+ *   </ons-alert-dialog>  
+ * </script>
  */
+
 (function() {
   'use strict';
 
@@ -9306,34 +10904,60 @@ limitations under the License.
     return {
       restrict: 'E',
       replace: false,
-
-      // NOTE: This element must coexists with ng-controller.
-      // Do not use isolated scope and template's ng-transclde.
-      scope: false, 
+      scope: true,
       transclude: false,
 
       compile: function(element, attrs) {
         var modifierTemplater = $onsen.generateModifierTemplater(attrs);
+ 
+        element.addClass('alert-dialog ' + modifierTemplater('alert-dialog--*'));
+       
+        var titleElement = angular.element(element[0].querySelector('.alert-dialog-title')),
+          contentElement = angular.element(element[0].querySelector('.alert-dialog-content'));
 
-        element.addClass(modifierTemplater('alert-dialog--*'));
+        if (titleElement.length) {
+          titleElement.addClass(modifierTemplater('alert-dialog-title--*'));
+        }
+
+        if (contentElement.length) {
+          contentElement.addClass(modifierTemplater('alert-dialog-content--*'));
+        }
 
         return {
           pre: function(scope, element, attrs) {
-            var alertDialog = new AlertDialogView(scope, element);
+            var alertDialog = new AlertDialogView(scope, element, attrs);
 
             $onsen.declareVarAttribute(attrs, alertDialog);
             $onsen.aliasStack.register('ons.alertDialog', alertDialog);
+
+            $onsen.addModifierMethods(alertDialog, 'alert-dialog--*', element);
+
+            if (titleElement.length) {
+              $onsen.addModifierMethods(alertDialog, 'alert-dialog-title--*', titleElement);
+            }
+
+            if (contentElement.length) {
+              $onsen.addModifierMethods(alertDialog, 'alert-dialog-content--*', contentElement);
+            }
+
+            if ($onsen.isAndroid()) {
+              alertDialog.addModifier('android');
+            }
+
             element.data('ons-alert-dialog', alertDialog);
 
             scope.$on('$destroy', function() {
               alertDialog._events = undefined;
+              $onsen.removeModifierMethods(alertDialog);
               element.data('ons-alert-dialog', undefined);
               $onsen.aliasStack.unregister('ons.alertDialog', alertDialog);
+
+              element = null;
             });
           },
 
           post: function(scope, element) {
-            $onsen.fireComponentEvent(element[0], "init");
+            $onsen.fireComponentEvent(element[0], 'init');
           }
         };
       }
@@ -9408,7 +11032,7 @@ limitations under the License.
           });
         },
         post: function(scope, element) {
-          $onsen.fireComponentEvent(element[0], "init");
+          $onsen.fireComponentEvent(element[0], 'init');
         }
       }
     };
@@ -9484,7 +11108,7 @@ limitations under the License.
             }
           },
           post: function(scope, element, attrs) {
-            $onsen.fireComponentEvent(element[0], "init");
+            $onsen.fireComponentEvent(element[0], 'init');
           }
         };
       }
@@ -9556,7 +11180,7 @@ limitations under the License.
 
         $onsen.addModifierMethods(button, 'button--*', element); 
 
-        transclude(scope, function(cloned) {
+        transclude(scope.$parent, function(cloned) {
           angular.element(element[0].querySelector('.ons-button-inner')).append(cloned);
         });
 
@@ -9604,7 +11228,7 @@ limitations under the License.
           scope = element = attrs = null;
         });
         
-        $onsen.fireComponentEvent(element[0], "init");
+        $onsen.fireComponentEvent(element[0], 'init');
       }
     };
   }]);
@@ -9646,10 +11270,22 @@ limitations under the License.
 
         return function(scope, element, attrs) {
           setImmediate(function() {
-            var carouselView = new CarouselView(scope, element, attrs);
-          });
+            var carousel = new CarouselView(scope, element, attrs);
 
-          $onsen.fireComponentEvent(element[0], "init");
+            $onsen.aliasStack.register('ons.carousel', carousel);
+            element.data('ons-carousel', carousel);
+
+            $onsen.declareVarAttribute(attrs, carousel);
+
+            scope.$on('$destroy', function() {
+              carousel._events = undefined;
+              element.data('ons-carousel', undefined);
+              $onsen.aliasStack.unregister('ons.carousel', carousel);
+              element = null;
+            });
+
+            $onsen.fireComponentEvent(element[0], 'init');
+          });
         };
       },
 
@@ -9787,13 +11423,135 @@ limitations under the License.
             }
           }
 
-          $onsen.fireComponentEvent(element[0], "init");
+          $onsen.fireComponentEvent(element[0], 'init');
         };
       }
     };
   }]);
 })();
 
+
+/**
+ * @ngdoc directive
+ * @id dialog 
+ * @name ons-dialog
+ * @description 
+ *  [en]Dialog that is displayed on top of current screen.[/en]
+ *  [ja]現在のスクリーンにダイアログを表示します。[/ja]
+ * @param var 
+ *  [en]Variable name to refer this dialog.[/en]
+ *  [ja]このダイアログを参照するための名前を指定します。[/ja]
+ * @param modifier
+ *  [en]The appearance of the dialog.[/en]
+ *  [ja]ダイアログの表現を指定します。[/ja]
+ * @param cancelable
+ *  [en]If this attribute is set the dialog can be closed by tapping the background or pressing the back button.[/en] 
+ *  [ja]この属性があると、ダイアログが表示された時に、背景やバックボタンをタップした時にダイアログを閉じます。[/ja]
+ * @param disabled
+ *  [en]If this attribute is set the dialog is disabled.[/en]
+ *  [ja]この属性がある時、ダイアログはdisabled状態になります。[/ja]
+ * @param animation
+ *  [en]The animation used when showing an hiding the dialog. Can be either "none" or "default".[/en]
+ *  [ja]ダイアログを表示する際のアニメーション名を指定します。[/ja]
+ * @param mask-color
+ *  [en]Color of the background mask. Default is "rgba(0, 0, 0, 0.2)".[/en]
+ *  [ja]背景のマスクの色を指定します。デフォルトは"rgba(0, 0, 0, 0.2)"です。[/ja]
+ * @property show(options)
+ *  [en]Show the dialog.[/en]
+ *  [ja]ダイアログを開きます。[/ja]
+ * @property hide(options)
+ *  [en]Hide the dialog.[/en]
+ *  [ja]ダイアログを閉じます。[/ja]
+ * @property isShown()
+ *  [en]Returns whether the dialog is visible or not.[/en]
+ *  [ja]ダイアログが表示されているかどうかを返します。[/ja]
+ * @property destroy()
+ *  [en]Destroy the dialog and remove it from the DOM tree.[/en]
+ *  [ja]ダイアログを破棄して、DOMツリーから取り除きます。[/ja]
+ * @property getDeviceBackButtonHandler()
+ *  [en]Retrieve the back button handler for overriding the default behavior.[/en]
+ *  [ja]バックボタンハンドラを取得します。デフォルトの挙動を変更することができます。[/ja]
+ * @property setCancelable(cancelable)
+ *  [en]Set whether the dialog can be canceled by the user when it is shown.[/en]
+ *  [ja]ダイアログを表示した際に、ユーザがそのダイアログをキャンセルできるかどうかを指定します。[/ja]
+ * @property isCancelable()
+ *  [en]Returns whether the dialog is cancelable or not.[/en]
+ *  [ja]このダイアログがキャンセル可能かどうかを返します。[/ja]
+ * @property setDisabled(disabled)
+ *  [en]Disable or enable the dialog.[/en]
+ *  [ja]このダイアログをdisabled状態にするかどうかを設定します。[/ja]
+ * @property isDisabled()
+ *  [en]Returns whether the dialog is disabled or enabled.[/en]
+ *  [ja]このダイアログがdisabled状態かどうかを返します。[/ja]
+ * @property on(eventName,listener)
+ *  [en]Add an event listener. Preset events are preshow, postshow, prehide and posthide.[/en]
+ *  [ja]イベントリスナーを追加します。preshow, postshow, prehide, posthideを指定できます。[/ja]
+ * @example
+ * <script>
+ *   ons.ready(function() {
+ *     ons.createDialog('dialog.html').then(function(dialog) {
+ *       dialog.show();
+ *     });
+ *   });
+ * </script>
+ *
+ * <script type="text/ons-template" id="dialog.html">
+ *   <ons-dialog cancelable>
+ *     ...
+ *   </ons-dialog>  
+ * </script>
+ */
+
+(function() {
+  'use strict';
+
+  var module = angular.module('onsen');
+
+  /**
+   * Dialog directive.
+   */
+  module.directive('onsDialog', ['$onsen', 'DialogView', function($onsen, DialogView) {
+    return {
+      restrict: 'E',
+      replace: false,
+      scope: true,
+      transclude: true,
+      templateUrl: $onsen.DIRECTIVE_TEMPLATE_URL + '/dialog.tpl',
+      compile: function(element, attrs, transclude) {
+        return {
+          pre: function(scope, element, attrs) {
+            transclude(scope, function(clone) {
+              angular.element(element[0].querySelector('.dialog')).append(clone);
+            });
+
+            var dialog = new DialogView(scope, element, attrs);
+
+            scope.modifierTemplater = $onsen.generateModifierTemplater(attrs);
+            $onsen.addModifierMethods(dialog, 'dialog--*', angular.element(element[0].querySelector('.dialog')));
+
+            $onsen.declareVarAttribute(attrs, dialog);
+            $onsen.aliasStack.register('ons.dialog', dialog);
+            element.data('ons-dialog', dialog);
+
+            scope.$on('$destroy', function() {
+              dialog._events = undefined;
+              $onsen.removeModifierMethods(dialog);
+              element.data('ons-dialog', undefined);
+              $onsen.aliasStack.unregister('ons.dialog', dialog);
+
+              element = null;
+            });
+          },
+
+          post: function(scope, element) {
+            $onsen.fireComponentEvent(element[0], 'init');
+          }
+        };
+      }
+    };
+  }]);
+
+})();
 
 (function() {
   'use strict';
@@ -9862,7 +11620,7 @@ limitations under the License.
       compile: function(element, attrs) {
         return function link(scope, element, attrs, controller, transclude) {
 
-          transclude(scope.$parent.$new(), function(cloned) {
+          transclude(scope.$parent, function(cloned) {
             element.append(cloned);
           });
 
@@ -9887,7 +11645,7 @@ limitations under the License.
             }
           }
        
-          $onsen.fireComponentEvent(element[0], "init");
+          $onsen.fireComponentEvent(element[0], 'init');
         };
       }
     };
@@ -10013,7 +11771,7 @@ limitations under the License.
           element = scope = attrs = null;
         });
       
-        $onsen.fireComponentEvent(element[0], "init");
+        $onsen.fireComponentEvent(element[0], 'init');
       }
     };
   }]);
@@ -10369,7 +12127,7 @@ limitations under the License.
          
           $onsen.addModifierMethods(list, 'list--*', element);
 
-          $onsen.fireComponentEvent(element[0], "init"); 
+          $onsen.fireComponentEvent(element[0], 'init'); 
         };
       }
     };
@@ -10433,7 +12191,7 @@ limitations under the License.
 
           $onsen.addModifierMethods(listHeader, 'list__header--*', elem);
 
-          $onsen.fireComponentEvent(element[0], "init");
+          $onsen.fireComponentEvent(element[0], 'init');
         };
       }
     };
@@ -10473,30 +12231,30 @@ limitations under the License.
       replace: false,
       transclude: false,
 
-      compile: function(elem, attrs, transcludeFn) {
+      compile: function() {
         return function(scope, element, attrs) {
           var listItem = new GenericView(scope, element, attrs);
 
           $onsen.declareVarAttribute(attrs, listItem);
 
           $onsen.aliasStack.register('ons.listItem', listItem);
-          element.data('ons-listItem', listItem);
+          element.data('ons-list-item', listItem);
 
           scope.$on('$destroy', function() {
             listItem._events = undefined;
             $onsen.removeModifierMethods(listItem);
-            element.data('ons-listItem', undefined);
+            element.data('ons-list-item', undefined);
             $onsen.aliasStack.unregister('ons.listItem', listItem);
             element = null;
           });
 
           var templater = $onsen.generateModifierTemplater(attrs);
-          elem.addClass('list__item ons-list-item-inner');
-          elem.addClass(templater('list__item--*'));
+          element.addClass('list__item ons-list-item-inner');
+          element.addClass(templater('list__item--*'));
 
-          $onsen.addModifierMethods(listItem, 'list__item--*', elem);
+          $onsen.addModifierMethods(listItem, 'list__item--*', element);
 
-          $onsen.fireComponentEvent(element[0], "init");
+          $onsen.fireComponentEvent(element[0], 'init');
         };
       }
     };
@@ -10541,13 +12299,13 @@ limitations under the License.
             div.innerHTML = html.trim();
             
             var newElement = angular.element(div);
-            newElement.css("display", "none");
+            newElement.css('display', 'none');
 
             element.append(newElement);
             ons.compile(newElement[0]);
 
             element.children()[0].remove();
-            newElement.css("display", "block");
+            newElement.css('display', 'block');
           });
         });
       }    
@@ -10633,7 +12391,7 @@ limitations under the License.
           },
 
           post: function(scope, element) {
-            $onsen.fireComponentEvent(element[0], "init");
+            $onsen.fireComponentEvent(element[0], 'init');
           }
         };
       }
@@ -10782,7 +12540,7 @@ limitations under the License.
 
           },
           post: function(scope, element, attrs) {
-            $onsen.fireComponentEvent(element[0], "init");
+            $onsen.fireComponentEvent(element[0], 'init');
           }
         };
       }
@@ -10851,7 +12609,7 @@ limitations under the License.
         if (i++ < 5)  {
           if (isAttached(element)) {
             fillStatusBar(element);
-            $onsen.fireComponentEvent(element, "init");
+            $onsen.fireComponentEvent(element, 'init');
             fireActualPageInitEvent(element);
           } else {
             setImmediate(f);
@@ -10911,6 +12669,7 @@ limitations under the License.
 
       $onsen.cleaner.onDestroy(scope, function() {
         page._events = undefined;
+        $onsen.removeModifierMethods(page);
         element.data('ons-page', undefined);
         $onsen.aliasStack.unregister('ons.page', page);
 
@@ -10933,7 +12692,7 @@ limitations under the License.
       // NOTE: This element must coexists with ng-controller.
       // Do not use isolated scope and template's ng-transclde.
       transclude: false,
-      scope: true,
+      scope: false,
 
       compile: function(element) {
         var children = element.children().remove();
@@ -11045,7 +12804,7 @@ limitations under the License.
             }
           }
         
-          $onsen.fireComponentEvent(element[0], "init");
+          $onsen.fireComponentEvent(element[0], 'init');
         };
       }
     };
@@ -11147,7 +12906,7 @@ limitations under the License.
             }, 500);
           }
         
-          $onsen.fireComponentEvent(element[0], "init");
+          $onsen.fireComponentEvent(element[0], 'init');
         };
       }
     };
@@ -11244,7 +13003,7 @@ limitations under the License.
       // NOTE: This element must coexists with ng-controller.
       // Do not use isolated scope and template's ng-transclude.
       transclude: false,
-      scope: true,
+      scope: false,
 
       compile: function(element, attrs) {
         var main = element[0].querySelector('.main'),
@@ -11287,7 +13046,7 @@ limitations under the License.
           });
 
           $onsen.fireComponentEvent(element[0], 'init');
-        }
+        };
       }
     };
   }]);
@@ -11393,7 +13152,7 @@ limitations under the License.
             $onsen.aliasStack.unregister('ons.splitView', splitView);
           });
 
-          $onsen.fireComponentEvent(element[0], "init");
+          $onsen.fireComponentEvent(element[0], 'init');
         };
       }
     };
@@ -11508,7 +13267,7 @@ limitations under the License.
             checkbox = element = attrs = scope = null;
           });
         
-          $onsen.fireComponentEvent(element[0], "init");
+          $onsen.fireComponentEvent(element[0], 'init');
         };
       }
     };
@@ -11611,7 +13370,7 @@ limitations under the License.
           element.addClass(tabbarView._scope.modifierTemplater('tab-bar--*__item'));
           element.addClass(tabbarView._scope.modifierTemplater('tab-bar__item--*'));
 
-          transclude(function(cloned) {
+          transclude(scope.$parent, function(cloned) {
             var wrapper = angular.element(element[0].querySelector('.tab-bar-inner'));
 
             if (attrs.icon || attrs.label || !cloned[0]) {
@@ -11670,7 +13429,7 @@ limitations under the License.
             tabbarView.setActiveTab(tabbarView._tabItems.indexOf(scope));
           }
         
-          $onsen.fireComponentEvent(element[0], "init");
+          $onsen.fireComponentEvent(element[0], 'init');
         };
       }
     };
@@ -11772,7 +13531,7 @@ limitations under the License.
         });
 
         var tabbarView = new TabbarView(scope, element, attrs);
-        $onsen.addModifierMethods(tabbarView, 'tab-bar--*', angular.element(element.children()[1]))
+        $onsen.addModifierMethods(tabbarView, 'tab-bar--*', angular.element(element.children()[1]));
 
         scope.tabbarId = tabbarView._tabbarId;
 
@@ -11791,7 +13550,7 @@ limitations under the License.
           $onsen.aliasStack.unregister('ons.tabbar', tabbarView);
         });
       
-        $onsen.fireComponentEvent(element[0], "init");
+        $onsen.fireComponentEvent(element[0], 'init');
       }
     };
   }]);
@@ -11824,7 +13583,7 @@ limitations under the License.
       terminal: true,
       compile: function(element) {
         $templateCache.put(element.attr('id'), element.remove().html());
-        $onsen.fireComponentEvent(element[0], "init");
+        $onsen.fireComponentEvent(element[0], 'init');
       }
     };
   }]);
@@ -11859,7 +13618,7 @@ limitations under the License.
 
   var module = angular.module('onsen');
 
-  function ensureLeftContainer(element) {
+  function ensureLeftContainer(element, modifierTemplater) {
     var container = element[0].querySelector('.left');
 
     if (!container) {
@@ -11872,12 +13631,14 @@ limitations under the License.
       container.innerHTML = '&nbsp;';
     }
 
-    angular.element(container).addClass('navigation-bar__left');
+    angular.element(container)
+      .addClass('navigation-bar__left')
+      .addClass(modifierTemplater('navigation-bar--*__left'));
 
     return container;
   }
 
-  function ensureCenterContainer(element) {
+  function ensureCenterContainer(element, modifierTemplater) {
     var container = element[0].querySelector('.center');
 
     if (!container) {
@@ -11890,12 +13651,13 @@ limitations under the License.
     }
 
     angular.element(container)
-      .addClass('navigation-bar__title navigation-bar__center');
+      .addClass('navigation-bar__title navigation-bar__center')
+      .addClass(modifierTemplater('navigation-bar--*__center'));
 
     return container;
   }
 
-  function ensureRightContainer(element) {
+  function ensureRightContainer(element, modifierTemplater) {
     var container = element[0].querySelector('.right');
 
     if (!container) {
@@ -11908,7 +13670,9 @@ limitations under the License.
       container.innerHTML = '&nbsp;';
     }
 
-    angular.element(container).addClass('navigation-bar__right');
+    angular.element(container)
+      .addClass('navigation-bar__right')
+      .addClass(modifierTemplater('navigation-bar--*__right'));
 
     return container;
   }
@@ -11940,16 +13704,16 @@ limitations under the License.
     return hasCenter && !hasOther;
   }
 
-  function ensureToolbarItemElements(element) {
+  function ensureToolbarItemElements(element, modifierTemplater) {
     var center;
     if (hasCenterClassElementOnly(element)) {
-      center = ensureCenterContainer(element);
+      center = ensureCenterContainer(element, modifierTemplater);
       element.contents().remove();
       element.append(center);
     } else {
-      center = ensureCenterContainer(element);
-      var left = ensureLeftContainer(element);
-      var right = ensureRightContainer(element);
+      center = ensureCenterContainer(element, modifierTemplater);
+      var left = ensureLeftContainer(element, modifierTemplater);
+      var right = ensureRightContainer(element, modifierTemplater);
 
       element.contents().remove();
       element.append(angular.element([left, center, right]));
@@ -11966,11 +13730,12 @@ limitations under the License.
 
       // NOTE: This element must coexists with ng-controller.
       // Do not use isolated scope and template's ng-transclde.
-      scope: true, 
+      scope: false, 
       transclude: false,
 
       compile: function(element, attrs) {
-        var modifierTemplater = $onsen.generateModifierTemplater(attrs),
+        var shouldAppendAndroidModifier = ons.platform.isAndroid() && !element[0].hasAttribute('fixed-style');
+        var modifierTemplater = $onsen.generateModifierTemplater(attrs, shouldAppendAndroidModifier ? ['android'] : []),
           inline = typeof attrs.inline !== 'undefined';
 
         element.addClass('navigation-bar');
@@ -11986,7 +13751,7 @@ limitations under the License.
           });
         }
 
-        ensureToolbarItemElements(element);
+        ensureToolbarItemElements(element, modifierTemplater);
 
         return {
           pre: function(scope, element, attrs) {
@@ -11997,7 +13762,7 @@ limitations under the License.
             }
           },
           post: function(scope, element, attrs) {
-            $onsen.fireComponentEvent(element[0], "init");  
+            $onsen.fireComponentEvent(element[0], 'init');  
           }
         };
       }
@@ -12034,6 +13799,7 @@ limitations under the License.
     return {
       restrict: 'E',
       transclude: true,
+      scope: false,
       templateUrl: $onsen.DIRECTIVE_TEMPLATE_URL + '/toolbar_button.tpl',
       link: {
         pre: function(scope, element, attrs) {
@@ -12069,7 +13835,7 @@ limitations under the License.
           });
         },
         post: function(scope, element, attrs) {
-          $onsen.fireComponentEvent(element[0], "init");
+          $onsen.fireComponentEvent(element[0], 'init');
         }
       }
     };
@@ -12670,10 +14436,12 @@ limitations under the License.
          * Create modifier templater function. The modifier templater generate css classes binded modifier name.
          *
          * @param {Object} attrs
+         * @param {Array} [modifiers] an array of appendix modifier
          * @return {Function} 
          */
-        generateModifierTemplater: function(attrs) {
-          var modifiers = attrs && typeof attrs.modifier === 'string' ? attrs.modifier.trim().split(/ +/) : [];
+        generateModifierTemplater: function(attrs, modifiers) {
+          var attrModifiers = attrs && typeof attrs.modifier === 'string' ? attrs.modifier.trim().split(/ +/) : [];
+          modifiers = angular.isArray(modifiers) ? attrModifiers.concat(modifiers) : attrModifiers;
 
           /**
            * @return {String} template eg. 'ons-button--*', 'ons-button--*__item'
@@ -12737,7 +14505,7 @@ limitations under the License.
           };
 
           var append = function(oldFn, newFn) {
-            if (typeof oldFn !== "undefined") {
+            if (typeof oldFn !== 'undefined') {
               return function() {
                 return oldFn.apply(null, arguments) || newFn.apply(null, arguments);
               };
@@ -12825,7 +14593,7 @@ limitations under the License.
 
           event.component = dom ? 
             angular.element(dom).data(dom.nodeName.toLowerCase()) || null : null;
-          event.initEvent(dom.nodeName.toLowerCase() + ":" + eventName, true, true);
+          event.initEvent(dom.nodeName.toLowerCase() + ':' + eventName, true, true);
           dom.dispatchEvent(event);
         },
 
@@ -13457,6 +15225,247 @@ window.animit = (function(){
 
   return Animit;
 })();
+
+/*
+Copyright 2013-2014 ASIAL CORPORATION
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+*/
+
+window.ons.notification = (function() {
+  var createAlertDialog = function(title, message, buttonLabels, primaryButtonIndex, modifier, animation, callback, messageIsHTML, cancelable, promptDialog, autofocus, placeholder) {
+    var dialogEl = angular.element('<ons-alert-dialog>'),
+      titleEl = angular.element('<div>').addClass('alert-dialog-title').text(title),
+      messageEl = angular.element('<div>').addClass('alert-dialog-content'),
+      footerEl = angular.element('<div>').addClass('alert-dialog-footer'),
+      inputEl;
+
+    if (modifier) {
+      dialogEl.attr('modifier', modifier);
+    }
+
+    dialogEl.attr('animation', animation);
+
+    if (messageIsHTML) {
+      messageEl.html(message);
+    } else {
+      messageEl.text(message);
+    }
+
+    dialogEl.append(titleEl).append(messageEl);
+
+    if (promptDialog) {
+      inputEl = angular.element('<input>')
+        .addClass('text-input')
+        .attr('placeholder', placeholder)
+        .css({width: '100%', marginTop: '10px'});
+      messageEl.append(inputEl);
+    }
+
+    dialogEl.append(footerEl);
+
+    angular.element(document.body).append(dialogEl);
+    ons.compile(dialogEl[0]);
+    var alertDialog = dialogEl.data('ons-alert-dialog');
+
+    if (buttonLabels.length <= 2) {
+      footerEl.addClass('alert-dialog-footer--one');
+    }
+
+    var createButton = function(i) {
+      var buttonEl = angular.element('<button>').addClass('alert-dialog-button').text(buttonLabels[i]);
+      
+      if (i == primaryButtonIndex) {
+        buttonEl.addClass('alert-dialog-button--primal');
+      }
+
+      if (buttonLabels.length <= 2) {
+        buttonEl.addClass('alert-dialog-button--one');
+      }
+
+      buttonEl.on('click', function() {
+        alertDialog.hide({
+          callback: function() {
+            if (promptDialog) {
+              callback(inputEl.val());
+            } else {
+              callback(i);
+            }
+            alertDialog.destroy();
+            alertDialog = null;
+            inputEl = null;
+          }
+        });
+      });
+      footerEl.append(buttonEl);
+      buttonEl = null;
+    };
+    for (var i = 0; i < buttonLabels.length; i++) {
+      createButton(i);
+    }
+
+    if (cancelable) {
+      alertDialog.setCancelable(cancelable);
+      alertDialog.on('cancel', function() {
+        if(promptDialog) {
+          callback(null);
+        } else {
+          callback(-1);
+        }
+        setTimeout(function() {
+          alertDialog.destroy();
+          alertDialog = null;
+          inputEl = null;
+        });
+      });
+    }
+
+    alertDialog.show({
+      callback: function() {
+        if(promptDialog && autofocus) {
+          inputEl[0].focus();
+        }
+      }
+    });
+
+    dialogEl = titleEl = messageEl = footerEl = null; 
+  };
+
+  return {
+    /**
+     * @param {Object} options
+     * @param {String} [options.message]
+     * @param {String} [options.messageHTML]
+     * @param {String} [options.buttonLabel]
+     * @param {String} [options.animation]
+     * @param {String} [options.title]
+     * @param {String} [options.modifier]
+     * @param {Function} [options.callback]
+     */
+    alert: function(options) {
+      var defaults = {
+        buttonLabel: 'OK',
+        animation: 'default',
+        title: 'Alert',
+        callback: function() {}
+      };
+    
+      options = angular.extend({}, defaults, options);
+      if (!options.message && !options.messageHTML) {
+        throw new Error('Alert dialog must contain a message.');
+      }
+      createAlertDialog(
+        options.title, 
+        options.message || options.messageHTML, 
+        [options.buttonLabel], 
+        0,
+        options.modifier,
+        options.animation,
+        options.callback,
+        !options.message ? true : false,
+        false, false, false
+      );
+    },
+
+    /**
+     * @param {Object} options
+     * @param {String} [options.message]
+     * @param {String} [options.messageHTML]
+     * @param {Array} [options.buttonLabels]
+     * @param {Number} [options.primaryButtonIndex]
+     * @param {Boolean} [options.cancelable]
+     * @param {String} [options.animation]
+     * @param {String} [options.title]
+     * @param {String} [options.modifier]
+     * @param {Function} [options.callback]
+     */
+    confirm: function(options) {
+      var defaults = {
+        buttonLabels: ['Cancel', 'OK'],
+        primaryButtonIndex: 1,
+        animation: 'default',
+        title: 'Confirm',
+        callback: function() {},
+        cancelable: false
+      };
+
+      options = angular.extend({}, defaults, options);
+      if (!options.message && !options.messageHTML) {
+        throw new Error('Confirm dialog must contain a message.');
+      }
+
+      createAlertDialog(
+        options.title,
+        options.message || options.messageHTML,
+        options.buttonLabels,
+        options.primaryButtonIndex,
+        options.modifier,
+        options.animation,
+        options.callback,
+        !options.message ? true : false,
+        options.cancelable,
+        false, false
+      );
+    },
+
+    /**
+     * @param {Object} options
+     * @param {String} [options.message]
+     * @param {String} [options.messageHTML]
+     * @param {String} [options.buttonLabel]
+     * @param {Boolean} [options.cancelable]
+     * @param {String} [options.animation]
+     * @param {String} [options.placeholder]
+     * @param {String} [options.title]
+     * @param {String} [options.modifier]
+     * @param {Function} [options.callback]
+     * @param {Boolean} [options.autofocus]
+     */
+    prompt: function(options) {
+      var defaults = {
+        buttonLabel: 'OK',
+        animation: 'default',
+        title: 'Alert',
+        placeholder: '',
+        callback: function() {},
+        cancelable: false,
+        autofocus: true,
+      };
+
+      options = angular.extend({}, defaults, options);
+      if (!options.message && !options.messageHTML) {
+        throw new Error('Prompt dialog must contain a message.');
+      }
+      
+      createAlertDialog(
+        options.title,
+        options.message || options.messageHTML,
+        [options.buttonLabel],
+        0,
+        options.modifier,
+        options.animation,
+        options.callback,
+        !options.message ? true : false,
+        options.cancelable,
+        true,
+        options.autofocus,
+        options.placeholder
+      );
+    }
+  };
+})();
+
 
 /*
 Copyright 2013-2014 ASIAL CORPORATION
